@@ -14,7 +14,7 @@ export default {
         Produtos selecionados
         <ul>
         <li v-for="item in itensSelecionados">
-            {{ item.nome }}: {{ item.preco }}
+            {{ item.nome }}: {{ item.valor }}
         </li>
         </ul>
   </div>

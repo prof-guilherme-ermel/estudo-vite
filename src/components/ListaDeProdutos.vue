@@ -31,7 +31,7 @@ export default {
             <li v-for="p in produtos"
                 @click="selecionarProduto(p)"
             >
-                {{ p.nome }}: {{ p.preco }}
+                {{ p.nome }}: {{ p.valor }}
             </li>
         </ul>
     </div>

@@ -2,13 +2,21 @@
 export default {
     data() {
         return {
-            produtos: [
-                { nome: 'Moletom', preco: 200 },
-                { nome: 'Jaqueta', preco: 250 },
-            ],
+            produtos: [],
         }
     },
+    created: function() {
+        this.carregarProdutos();
+    },
     methods: {
+        carregarProdutos: async function() {
+            const resposta = await fetch('http://localhost:3000/produtos');
+            const dados = await resposta.json();
+            if (dados.error) {
+                return alert(dados.error);
+            }
+            this.produtos = dados.produtos;
+        },
         selecionarProduto: function(produto) {
             this.$emit('produto-selecionado', produto);
         }

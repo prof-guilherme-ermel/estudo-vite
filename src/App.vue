@@ -7,12 +7,12 @@ export default {
   components: { ListaDeProdutos, ProdutosSelecionados },
   data() {
     return {
-      produtosSelecionados: [],
+      selecionados: [],
     }
   },
   methods: {
     selecionarProduto: function(produto) {
-      this.produtosSelecionados.push(produto);
+      this.selecionados.push(produto);
     }
   }
 }
@@ -20,7 +20,7 @@ export default {
 
 <template>
   <ProdutosSelecionados
-    :produtosSelecionados="produtosSelecionados"
+    :itens-selecionados="selecionados"
   />
 
   <ListaDeProdutos

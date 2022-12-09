@@ -1,7 +1,7 @@
 <script>
 export default {
     props: {
-        produtosSelecionados: {
+        itensSelecionados: {
             type: Array,
             required: true,
         }
@@ -13,8 +13,8 @@ export default {
     <div>
         Produtos selecionados
         <ul>
-        <li v-for="p in produtosSelecionados">
-            {{ p.nome }}: {{ p.preco }}
+        <li v-for="item in itensSelecionados">
+            {{ item.nome }}: {{ item.preco }}
         </li>
         </ul>
   </div>
